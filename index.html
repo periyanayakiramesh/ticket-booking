@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+
+    <h1> Movie Ticket Booking</h1>
+<div class="movie-container">
+
+    <div class="movie-card" onclick="selectMovie('150')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdxb5-17yoGvn7ZERnp4agnG3oQ4NMSvn9Zr5802jORA&s=10" alt="Leo Movie">
+        <p>Leo - ₹150 </p>
+    </div>
+
+    <div class="movie-card" onclick="selectMovie('180')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJbD67eRLCs7J36Ar-ACdwh05ezOGCQWNodx6T6W_OoyT-jcPKWkHkO54&s=10" alt="Vikram Movie">
+        <p>Vikram - ₹180</p>
+    </div>
+
+    <div class="movie-card" onclick="selectMovie('200')">
+        <img src="https://www.bollywoodhungama.com/wp-content/uploads/2022/09/Sita-Ramam-9.jpg" alt="Sita Ramam Movie">
+        <p>Sita Ramam - ₹200</p>
+    </div>
+
+</div>
+
+
+<!--movie selection-->
+ <label>Select Movie</label>
+<select id="movieChoice" onchange="calculatePrice()">
+    <option value="">---Choose movie----</option>
+    <option value="Leo">Leo</option>
+    <option value="Vikram">Vikram</option>
+    <option value="Sita Ramam">Sita Ramam</option>
+</select>
+
+
+<!--show time-->
+    <label>Select Showtime:</label>
+
+      <select id="time">
+
+        <option value="">---- Choose Showtime ---</option>
+        <option>10:00 AM</option>
+        <option>2:00 PM</option>
+        <option>6:00 PM</option>
+    </select>
+
+<!--number of tickets-->
+    <label>Number of Tickets:</label>
+
+    <input type="number" id="qty" value="1" min="1"
+           oninput="calculatePrice()">
+
+<!--email-->           
+
+    <label>Email Address:</label>
+    <input type="email" id="email" placeholder="example@mail.com">
+
+<!--total price-->
+
+    <h3 id="price">Total Price: ₹0</h3>
+
+ <!--button-->   
+
+    <button onclick="bookTicket()">Book Tickets</button>
+    <button onclick="resetForm()">Reset Form</button>
+
+<!--your bookings-->
+    <p id="message"></p><hr>
+    
+   
+
+    <h2>Your Bookings (<span id="count">0</span>)</h2>
+
+    <input id="search" placeholder="Filter by movie or email"
+           oninput="showBookings()">
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Movie</th>
+                <th>Showtime</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Email</th>
+                
+            </tr>
+        </thead>
+        <tbody id="list"></tbody>
+    </table>
+</div>
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
