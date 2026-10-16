@@ -7,8 +7,8 @@ function selectMovie(price) {
     let movie = "";
 
     if (price === "150") {
-        movie = "Leo";
-    } else if (price === "180") {
+        movie = "Leo"}
+         else if (price === "180") {
         movie = "Vikram";
     } else if (price === "200") {
         movie = "Sita Ramam";
@@ -26,19 +26,21 @@ function calculatePrice() {
     let qty = Number(document.getElementById("qty").value);
     let price = 0;
 
-    if (movie === "Leo") {
-        price = 150;}
-        else if (movie === "Vikram") {
-        price = 180;}
-         else if (movie === "Sita Ramam") {
-        price = 200;
-    }
+    if (movie === "Leo") 
+       { price = 150;}
+        else if (movie === "Vikram") 
+        {price = 180;}
+         else if (movie === "Sita Ramam")
+        {price = 200; }
+        
+   
 
-    if (qty < 1 || !Number.isInteger(qty)) {
+    if (qty < 1 || !Number.isInteger(qty)) 
+        {
         document.getElementById("price").innerText =
             "Enter a valid ticket quantity";
-        return;
-    }
+        return; }
+   
 
     document.getElementById("price").innerText =
         "Total Price: ₹" + (price * qty);
@@ -142,5 +144,5 @@ function resetForm() {
 }
 
 
-// Display an empty booking table when page opens
+
 showBookings();
