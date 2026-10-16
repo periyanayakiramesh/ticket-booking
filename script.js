@@ -15,7 +15,6 @@ function selectMovie(price) {
     }
 
     document.getElementById("movieChoice").value = movie;
-
     calculatePrice();
 }
 
@@ -61,17 +60,17 @@ function bookTicket() {
 
         document.getElementById("message").innerText =
             "Please enter all details correctly!";
-        return;
-    }
+        return; }
+   
 
     let price = 0;
 
     if (movie === "Leo") {
-        price = 150;
-    } else if (movie === "Vikram") {
-        price = 180;
-    } else if (movie === "Sita Ramam") {
-        price = 200;
+        price = 150;}
+         else if (movie === "Vikram") 
+            {price = 180;}
+         else if (movie === "Sita Ramam")
+        { price = 200;
     }
 
     let total = price * qty;
@@ -82,9 +81,8 @@ function bookTicket() {
         time: time,
         qty: qty,
         total: total,
-        email: email
-    };
-
+        email: email};
+    
     bookings.push(booking);
     bookingId++;
 

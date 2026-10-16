@@ -2,30 +2,25 @@
 body {
     font-family: Arial;
     margin: 30px; 
-    background: #f1f4f8;
-}
+    background: #f1f4f8;}
 
 .box {
     background: white;
     padding:20px;
-    border-radius: 8px;
-}
+    border-radius: 8px;}
 h1, h2 {
-    color: #173e70;
-}
+    color: #173e70;}
 label {
     display: block;
     font-weight: bold;
-    margin-top: 12px;
-}
+    margin-top: 12px;}
 
 input, select {
     width: 95%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-}
+    border-radius: 4px;}
 
 button {
     padding: 10px 18px;
@@ -34,8 +29,7 @@ button {
     color: white;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
-}
+    cursor: pointer;}
 
 button:hover {
     background: #174c85;
@@ -43,39 +37,40 @@ button:hover {
 
 #price {
     background: #eaf1f7;
-    padding: 12px;
-}
+    padding: 12px;}
 
 table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    background: white;
-}
+    background: white;}
 
 th, td {
     padding: 10px;
     border: 1px solid #ddd;
-    text-align: left;
-}
+    text-align: left;}
 
 th {
-    background: #eaf1f7;
-}
+    background: #eaf1f7;}
 
 @media (max-width: 600px) {
     body {
-        margin: 10px;
-    }
+        margin: 10px;}
 
     .box {
         padding: 10px;
-        overflow-x: auto;
-    }
+        overflow-x: auto;}
 
     table {
-        min-width: 650px;
-    }
+        min-width: 650px;}
+    
+   
+
+    .movie-card {
+        width: 32%;}
+
+    .movie-card img {
+        height: 130px;}
 }
 
 .movie-container {
@@ -101,20 +96,4 @@ th {
     transform: scale(1.05);
 }
 
-.movie-card p {
-    font-weight: bold;
-}
 
-@media (max-width: 500px) {
-    .movie-container {
-        gap: 10px;
-    }
-
-    .movie-card {
-        width: 32%;
-    }
-
-    .movie-card img {
-        height: 130px;
-    }
-}
